@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">MurariAdinApp</string>
+    <string-array name="BusType">
+        <item>A/C Seater (2+2)</item>
+        <item>NON A/C Seater (2+1)</item>
+        <item>NON A/C Seater (2+2)</item>
+
+    </string-array>
+</resources>

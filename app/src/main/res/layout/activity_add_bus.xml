@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".AddBus">
+
+    <TextView
+        android:id="@+id/AB_Name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_black"
+        android:paddingLeft="20dp"
+        android:text=""
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:textSize="30dp"
+        android:textStyle="italic" />
+
+
+
+    <Spinner
+        android:id="@+id/AB_Spinner_Bustype"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/AB_Name"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/designwidget"
+        android:paddingLeft="22dp"
+        android:textColor="#03A9F4"
+        android:textSize="25dp" />
+
+    <com.santalu.maskedittext.MaskEditText
+        android:paddingLeft="22dp"
+        android:id="@+id/AB_Busnoedt"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/designwidget"
+        android:textColor="#03A9F4"
+        android:textColorHint="#03A9F4"
+        android:textSize="20dp"
+        android:hint="Bus No."
+        android:layout_below="@id/AB_Spinner_Bustype"
+        app:met_mask="##-##-##-####"
+        />
+    <com.santalu.maskedittext.MaskEditText
+        android:paddingLeft="22dp"
+        android:id="@+id/AB_NoOfSeat"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="210dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/designwidget"
+        android:textColor="#03A9F4"
+        android:textColorHint="#03A9F4"
+        android:textSize="20dp"
+        android:layout_below="@id/AB_Busnoedt"
+        app:met_mask="##"
+        android:hint="No of seats"
+        android:inputType="number"/>
+
+    <com.santalu.maskedittext.MaskEditText
+        android:paddingLeft="22dp"
+        android:id="@+id/AB_Price_Ticket"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="210dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/designwidget"
+        android:textColor="#03A9F4"
+        android:textColorHint="#03A9F4"
+        android:textSize="20dp"
+        android:layout_below="@id/AB_Busnoedt"
+        app:met_mask="###"
+        android:hint="Ticket price"
+        android:inputType="number"
+
+        />
+
+    <Button
+        android:id="@+id/AB_BusStartTime"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/AB_NoOfSeat"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/designwidget"
+        android:hint="Departure Time"
+        android:paddingLeft="10dp"
+        android:textColor="#03A9F4"
+        android:textColorHint="#03A9F4"
+        android:textSize="20dp"
+        />
+
+
+
+
+
+    <Button
+        android:id="@+id/AB_BusEndTime"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/AB_BusStartTime"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/designwidget"
+        android:hint="Arrival Time"
+        android:paddingLeft="10dp"
+        android:textColor="#03A9F4"
+        android:textColorHint="#03A9F4"
+        android:textSize="20dp"
+        />
+
+
+    <Button
+        android:id="@+id/AB_AddBusbtn"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="110dp"
+        android:layout_below="@+id/LocationIDS"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/button_black"
+        android:text="Confirm"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:textSize="20dp"
+        android:textAllCaps="false"
+
+        />
+    <Button
+        android:id="@+id/AB_Refresh"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/LocationIDS"
+        android:layout_marginTop="160dp"
+        android:background="@drawable/button_black"
+        android:text="Refresh"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:textSize="20dp"
+        android:textAllCaps="false"
+        android:layout_marginLeft="80dp"
+        android:layout_marginRight="80dp"
+        />
+
+    <RelativeLayout
+        android:layout_below="@id/AB_BusEndTime"
+        android:layout_width="wrap_content"
+        android:id="@+id/LocationIDS"
+        android:layout_height="wrap_content">
+        <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+            android:id="@+id/AB_BusPinStart"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/designwidget"
+            android:hint="Departure Pin"
+            android:paddingLeft="10dp"
+            android:textColor="#03A9F4"
+            android:textColorHint="#03A9F4"
+            android:inputType="number"
+            android:textSize="20dp"
+            android:textAlignment="center"
+
+            ></com.toptoche.searchablespinnerlibrary.SearchableSpinner>
+
+        <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+            android:id="@+id/AB_BusPinEnd"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/AB_BusPinStart"
+            android:layout_marginTop="6dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/designwidget"
+            android:hint="Arrival Pin"
+            android:paddingLeft="10dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="#03A9F4"
+            android:textColorHint="#03A9F4"
+            android:inputType="number"
+            android:textAlignment="center"
+
+
+            ></com.toptoche.searchablespinnerlibrary.SearchableSpinner>
+
+
+        <TextView
+            android:id="@+id/TV_AB_BusPinStart"
+            android:layout_width="200dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="210dp"
+            android:layout_marginTop="25.5dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/designwidget"
+            android:hint="Location"
+            android:inputType="number"
+            android:paddingLeft="10dp"
+            android:textColor="#03A9F4"
+            android:textColorHint="#03A9F4"
+            android:textSize="20dp"
+            android:textAlignment="center"
+            ></TextView>
+
+
+        <TextView
+            android:id="@+id/TV_AB_BusPinEnd"
+            android:layout_width="200dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="210dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/designwidget"
+            android:hint="Location"
+            android:inputType="number"
+            android:paddingLeft="10dp"
+            android:textColor="#03A9F4"
+            android:textColorHint="#03A9F4"
+            android:textSize="20dp"
+            android:layout_below="@id/AB_BusPinStart"
+            android:layout_marginTop="11.3dp"
+            android:textAlignment="center"
+            ></TextView>
+
+    </RelativeLayout>
+
+    <RadioGroup
+        android:layout_marginTop="130dp"
+        android:layout_below="@id/AB_BusEndTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textColorHint="#03A9F4"
+        android:textColor="#03A9F4"
+        android:id="@+id/radioGroup">
+        <RadioButton
+            android:id="@+id/Runs_everyday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:text="Runs Everyday"
+            android:onClick="checkButton"
+            android:textColorHint="#03A9F4"
+            android:checked="true"
+            android:textColor="#03A9F4" />
+
+
+        <RadioButton
+            android:id="@+id/Runs_someday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Specific Days"
+            android:onClick="checkButton"
+            android:textSize="20dp"
+            android:textColorHint="#03A9F4"
+            android:textColor="#03A9F4" />
+
+
+
+
+
+
+
+    </RadioGroup>
+
+
+
+
+
+</RelativeLayout>

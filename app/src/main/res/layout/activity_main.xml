@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/background"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/MN_Name"
+        android:layout_width="500dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="0dp"
+        android:background="@drawable/button_black"
+        android:paddingLeft="20dp"
+        android:text=""
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="25dp"
+        android:textStyle="italic"
+
+        />
+
+
+    <Button
+        android:id="@+id/MN_Tickets"
+        android:layout_width="184dp"
+        android:layout_height="35dp"
+        android:layout_below="@+id/MN_AddLocationbtn"
+        android:layout_alignRight="@+id/MN_AddBus"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="31dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="-194dp"
+        android:layout_marginBottom="0dp"
+        android:background="@drawable/button_black"
+        android:paddingLeft="20dp"
+        android:text="See Tickets"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="25dp"
+        android:textStyle="italic" />
+
+    <EditText
+        android:paddingLeft="22dp"
+        android:id="@+id/MN_AddLocationedt"
+        android:layout_width="500dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/designwidget"
+        android:textColor="#03A9F4"
+        android:textColorHint="#03A9F4"
+        android:textSize="25dp"
+        android:hint="Add locality"
+        android:textStyle="italic"
+        />
+
+
+    <com.santalu.maskedittext.MaskEditText
+        android:paddingLeft="22dp"
+        android:id="@+id/MN_LocationPinedt"
+        android:layout_width="500dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@+id/MN_AddLocationedt"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/designwidget"
+        android:textColor="#03A9F4"
+        android:textColorHint="#03A9F4"
+        android:textSize="25dp"
+        android:hint="locality Pin no."
+        android:inputType="number"
+        android:textStyle="italic"
+        app:met_mask="######"
+        />
+
+
+
+
+
+    <Spinner
+
+        android:paddingLeft="22dp"
+        android:id="@+id/MN_LocationStateedt"
+        android:layout_width="500dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@+id/MN_LocationPinedt"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/designwidget"
+        android:textColor="#03A9F4"
+        android:textColorHint="#03A9F4"
+        android:textSize="55dp"
+        android:textStyle="italic"
+        />
+
+
+
+    <Button
+        android:id="@+id/MN_AddLocationbtn"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="100dp"
+        android:layout_below="@+id/MN_LocationStateedt"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button_black"
+        android:text="Add"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="25dp"
+        android:textStyle="italic" />
+
+
+    <Button
+        android:id="@+id/MN_AddBus"
+        android:layout_width="184dp"
+        android:layout_height="35dp"
+        android:layout_below="@+id/MN_LocationStateedt"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="18dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="92dp"
+        android:background="@drawable/button_black"
+        android:text="Add Bus"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="25dp"
+        android:textStyle="italic" />
+
+
+</RelativeLayout>
